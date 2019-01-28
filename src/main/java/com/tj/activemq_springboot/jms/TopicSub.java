@@ -19,6 +19,11 @@ public class TopicSub {
         System.out.println("video.topic 消费者：receivel="+text);
 
     }
+
+    /**
+     * 没得加containerFactory = "jmsListenerContainerTopic"的情况下，无法订阅消息
+     * @param text
+     */
     @JmsListener(destination = "video.topic")
     public void receive3(String text){
         System.out.println("video.topic 消费者：receivel="+text);
